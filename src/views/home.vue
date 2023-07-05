@@ -1,16 +1,16 @@
 <template>
   <div class="position-absolute w-screen h-screen flex flex-col items-center justify-center">
-    <div class="font-bold text-5xl">Country</div>
-    <div class="mt-8 w-full max-w-lg">
+    <div class="font-bold text-5xl text-gray-700">Countries</div>
+    <div class="mt-8 w-full max-w-lg p-6 md:p-0">
       <div class="relative">
-        <input @focusin="searchIcon" @focusout="searchIcon" v-model="country" id="search" type="text" class="w-full bg-white shadow px-6 py-3 border-2 border-gray-200 transition ease-in delay-100 rounded-md focus:outline-none" placeholder="Tap any country name" :autocomplete="false">
+        <input @focusin="searchIcon" @focusout="searchIcon" v-model="country" id="search" type="text" class="w-full bg-white shadow px-6 py-3 border-2 border-gray-200 transition ease-in delay-100 rounded-md focus:outline-none text-gray-800" placeholder="Tap any country name" :autocomplete="false">
         <svg id="magnify" class="text-gray-200 absolute right-6 transition ease-in delay-100" style="bottom: 26%;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="arcs"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </div>
       <div class="mt-5 rounded min-h-200">
         <template v-if="!notFound">
           <div class="shadow flex flex-col">
             <template v-for="(res, index) in result" :key="index">
-              <router-link :to="{name: 'detailCountry', params: { country: res.name.common.toLowerCase() }}" class="country-item font-semibold px-6 py-2 cursor-pointer">{{res.name.common}}</router-link>
+              <router-link :to="{name: 'detailCountry', params: { country: res.name.common.toLowerCase() }}" class="country-item font-semibold px-6 py-2 cursor-pointer text-gray-800">{{res.name.common}}</router-link>
             </template>
           </div>
         </template>
