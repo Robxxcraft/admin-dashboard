@@ -1,10 +1,10 @@
-## Country
+## Countries
 
 
 ### 1. Jalankan perintah dibawah ini untuk menyalin project
 
 ```sh
-git clone https://github.com/Robxxcraft/country
+git clone https://github.com/Robxxcraft/countries
 ```
 <br>
 
