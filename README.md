@@ -1,7 +1,5 @@
 ## Country
 
-Hasil tes Frontend Web - Robbi Chandra
-
 
 ### 1. Jalankan perintah dibawah ini untuk menyalin project
 
